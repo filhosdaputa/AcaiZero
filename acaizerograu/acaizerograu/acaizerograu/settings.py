@@ -33,6 +33,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'app',
+    'caixa',
+    'entregas',
+    'home',
+    'outros',
+    'pedidos',
     # Add your apps here to enable them
     'django.contrib.admin',
     'django.contrib.auth',
