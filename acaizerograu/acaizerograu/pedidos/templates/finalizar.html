@@ -1,0 +1,31 @@
+﻿{% extends 'base.html' %}
+{% block body %}
+<h2>Pedido</h2>
+<form method="get" action="/pedidos/pagamento">
+Acai: <label>
+            <input type="radio" name="acai" value="{{acai3}}" checked />
+            <img src="../../static/app/img/{{acai3}}.png" />
+        </label>
+Tamanho : <label>
+            <input type="radio" name="tamanho" value="{{tamanho}}" checked />
+            <img src="../../static/app/img/{{tamanho}}.png" />
+        </label>
+Adicionais:
+    {% for adicional in adicionais1 %}
+        <label>
+            <input type="checkbox" name="adicional" value="{{adicional}}" checked/>
+            <img src="../../static/app/img/adicionais/{{adicional}}.png" />
+        </label>
+        {% endfor %}
+        
+        <label>
+            <input type="checkbox" name="qnt" value="{{adicionais1|wordcount}}" />
+            <img src="../../static/app/img/numeros/{{adicionais1|wordcount}}.png" />
+        </label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button type="submit">Pagamento</button>
+</form>
+{% endblock %}

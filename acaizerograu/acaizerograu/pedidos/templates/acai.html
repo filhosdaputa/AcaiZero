@@ -1,35 +1,79 @@
 ﻿{% extends 'base.html' %}
 {% block body %}
-<form>
-<div class="col-md-6">
-    <h2>Tamanho</h2>
-    <label>
-        <input type="radio" name="tamanho" value="pequeno" />
-        <img src="../../static/app/img/pequeno.png" />
-    </label>
-    <label>
-        <input type="radio" name="tamanho" value="medio" />
-        <img src="../../static/app/img/medio.png" />
-    </label>    
-    <label>
-        <input type="radio" name="tamanho" value="grande" />
-        <img src="../../static/app/img/grande.png" />
-    </label>
-        
-</div>
-
-<div class="col-md-6">
-    <h2>Adicionais</h2>
-    
-        {% for adicional in adicionais %}
-            <label>
-                <input type="checkbox" name={{adicional.nome}} value={{adicional.preco}} />
-                <img src="../../static/app/img/{{adicional.nome}}.png" />
-            </label>
-        {% endfor %}
-        
-</div>
-    <br /><br /><br />
-    <button type="submit">Pagamento</button>
+<form method="get" action="/pedidos/acai_1">
+        <label>
+            <input type="radio" name="acai2" value="acaipuro" />
+            <img src="../../static/app/img/acaipuro.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaibanana" />
+            <img src="../../static/app/img/acaibanana.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaimorango" />
+            <img src="../../static/app/img/acaimorango.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaimisto" />
+            <img src="../../static/app/img/acaimisto.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaitropical" />
+            <img src="../../static/app/img/acaitropical.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaicupuacu" />
+            <img src="../../static/app/img/acaicupuacu.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaininho" />
+            <img src="../../static/app/img/acaininho.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaikids" />
+            <img src="../../static/app/img/acaikids.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaisensacao" />
+            <img src="../../static/app/img/acaisensacao.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaiflorestanegra" />
+            <img src="../../static/app/img/acaiflorestanegra.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acainutella" />
+            <img src="../../static/app/img/acainutella.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaikitkat" />
+            <img src="../../static/app/img/acaikitkat.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaisonhodevalsa" />
+            <img src="../../static/app/img/acaisonhodevalsa.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaipower" />
+            <img src="../../static/app/img/acaipower.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaizerograu" />
+            <img src="../../static/app/img/acaizerograu.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaipremium" />
+            <img src="../../static/app/img/acaipremium.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaifit" />
+            <img src="../../static/app/img/acaifit.png" />
+        </label>
+        <label>
+            <input type="radio" name="acai2" value="acaizero" />
+            <img src="../../static/app/img/acaizero.png" />
+        </label>
+    <br />
+    <button type="submit">Próximo</button>
 </form>
 {% endblock %}
