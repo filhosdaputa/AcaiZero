@@ -182,6 +182,8 @@
     <Content Include="outros\templates\realizados.html" />
     <Content Include="outros\templates\outros.html" />
     <Content Include="pedidos\templates\acai.html" />
+    <Content Include="pedidos\templates\acaimix.html" />
+    <Content Include="pedidos\templates\acaimix_1.html" />
     <Content Include="pedidos\templates\acai_1.html" />
     <Content Include="pedidos\templates\finalizar.html" />
     <Content Include="pedidos\templates\pagamento.html" />
