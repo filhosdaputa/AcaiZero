@@ -1,4 +1,30 @@
 ﻿{% extends 'base.html' %}
 {% block body %}
-Produtos
+<form method="get" action="/pedidos/produtos_1">
+        <label>
+            <input type="radio" name="produto" value="aguasgas" />
+            <img src="../../static/app/img/aguasgas.png" />
+        </label>
+        <label>
+            <input type="radio" name="produto" value="aguacgas" />
+            <img src="../../static/app/img/aguacgas.png" />
+        </label>
+        <label>
+            <input type="radio" name="produto" value="cocacola" />
+            <img src="../../static/app/img/cocacola.png" />
+        </label>
+        <label>
+            <input type="radio" name="produto" value="cocazero" />
+            <img src="../../static/app/img/cocazero.png" />
+        </label>
+        <label>
+            <input type="radio" name="produto" value="guarana" />
+            <img src="../../static/app/img/guarana.png" />
+        </label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button type="submit">Próximo</button>
+</form>
 {% endblock %}

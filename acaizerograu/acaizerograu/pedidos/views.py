@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from outros.models import adicional, acai, acaimix, casadinho, acaicreme, acaienergy
+from outros.models import adicional, acai, acaimix, casadinho, acaicreme, acaienergy, produto
 from .models import comanda, comanda_acai, comanda_acaimix, comanda_casadinho, comanda_acaicreme, comanda_acaienergy
 from caixa.models import caixa
 # Create your views here.
@@ -397,3 +397,52 @@ def acaicreme_1(request):
 
 def produtos(request):
     return render(request, 'produtos.html', {'title':'Produtos'})
+
+def produtos_1(request):
+    produto1 = request.GET.get('produto')
+    if produto1 == 'cocacola':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1.total = caixatotal1.total+controle.total
+        caixatotal1.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    elif produto1 == 'cocazero':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1.total = caixatotal1.total+controle.total
+        caixatotal1.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    elif produto1 == 'guarana':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1.total = caixatotal1.total+controle.total
+        caixatotal1.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    elif produto1 == 'aguacgas':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1.total = caixatotal1.total+controle.total
+        caixatotal1.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    elif produto1 == 'aguasgas':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1.total = caixatotal1.total+controle.total
+        caixatotal1.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    return render(request, 'produtos_1.html', {'title':'Produtos'})

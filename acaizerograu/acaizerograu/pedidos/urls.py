@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.pedidos),
     url(r'^produtos/$', views.produtos),
+    url(r'^produtos_1/$', views.produtos_1),
     url(r'^acaienergy/$', views.acaienergy1),
     url(r'^acaienergy_1/$', views.acaienergy_1),
     url(r'^acaicreme/$', views.acaicreme1),

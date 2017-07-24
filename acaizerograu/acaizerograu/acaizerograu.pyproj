@@ -194,6 +194,8 @@
     <Content Include="pedidos\templates\finalizar.html" />
     <Content Include="pedidos\templates\pagamento.html" />
     <Content Include="pedidos\templates\pedidos.html" />
+    <Content Include="pedidos\templates\produtos.html" />
+    <Content Include="pedidos\templates\produtos_1.html" />
     <Content Include="pedidos\templates\sorvete.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
