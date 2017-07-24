@@ -1,0 +1,34 @@
+﻿{% extends 'base.html' %}
+{% block body %}
+<form method="get" action="/pedidos/acaicreme_1">
+        <label>
+            <input type="radio" name="creme" value="puro" />
+            <img src="../../static/app/img/cremepuro.png" />
+        </label>
+        <label>
+            <input type="radio" name="creme" value="banana" />
+            <img src="../../static/app/img/cremebanana.png" />
+        </label>
+        <label>
+            <input type="radio" name="creme" value="morango" />
+            <img src="../../static/app/img/crememorango.png" />
+        </label>
+        <label>
+            <input type="radio" name="creme" value="cupuacu" />
+            <img src="../../static/app/img/cremecupuacu.png" />
+        </label>
+        <label>
+            <input type="radio" name="creme" value="ninho" />
+            <img src="../../static/app/img/cremeninho.png" />
+        </label>
+        <label>
+            <input type="radio" name="creme" value="zero" />
+            <img src="../../static/app/img/cremezero.png" />
+        </label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button type="submit">Próximo</button>
+</form>
+{% endblock %}

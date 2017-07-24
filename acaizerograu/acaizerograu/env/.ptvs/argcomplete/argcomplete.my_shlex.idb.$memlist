@@ -1,0 +1,6 @@
+sys
+basestring
+shlex
+StringIO
+deque
+os
