@@ -1,5 +1,5 @@
 from django.db import models
-from outros.models import produto, adicional, acai, acaimix, casadinho, acaienergy, acaicreme
+from outros.models import produto, adicional, acai, acaimix, casadinho, acaienergy, acaicreme, milkshake, petit, fondue, sorvete
 
 # Create your models here.
 class item(models.Model):
@@ -31,6 +31,15 @@ class comanda_acai(models.Model):
     id = models.AutoField(primary_key=True)
     itens = models.ForeignKey(acai)
     tamanho = models.CharField(max_length=1, choices=SIZES)
+    total = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return str(self.id)
+
+class comanda_sorvete(models.Model):
+    
+    id = models.AutoField(primary_key=True)
+    itens = models.ForeignKey(sorvete)
     total = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
@@ -83,6 +92,37 @@ class comanda_acaicreme(models.Model):
     id = models.AutoField(primary_key=True)
     itens = models.ForeignKey(acaicreme)
     tamanho = models.CharField(max_length=1, choices=SIZES)
+    total = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return str(self.id)
+
+class comanda_milkshake(models.Model):
+    SIZES = (
+        ('P', 'Pequeno'),
+        ('G', 'Grande'),
+    )
+    id = models.AutoField(primary_key=True)
+    itens = models.ForeignKey(milkshake)
+    tamanho = models.CharField(max_length=1, choices=SIZES)
+    total = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return str(self.id)
+
+class comanda_petit(models.Model):
+    
+    id = models.AutoField(primary_key=True)
+    itens = models.ForeignKey(petit)
+    total = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return str(self.id)
+
+class comanda_fondue(models.Model):
+    
+    id = models.AutoField(primary_key=True)
+    itens = models.ForeignKey(fondue)
     total = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):

@@ -1,1 +1,16 @@
 django >=1.9, <2
+appdirs
+argcomplete
+Django
+numpy
+olefile
+Pillow
+pip
+pyserial
+python-escpos
+pytz
+pyusb
+pyYAML
+setuptools
+six
+wheel

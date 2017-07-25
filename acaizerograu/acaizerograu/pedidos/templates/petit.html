@@ -1,0 +1,17 @@
+﻿{% extends 'base.html' %}
+{% block body %}
+<form method="get" action="/pedidos/petit_1">
+        <label>
+            <input type="radio" name="petit" value="classico" />
+            <img src="../../static/app/img/classico.png" />
+        </label>
+        <label>
+            <input type="radio" name="petit" value="kids" />
+            <img src="../../static/app/img/kids.png" />
+        </label>
+    <br />
+    <br />
+    <br />
+    <button type="submit">Próximo</button>
+</form>
+{% endblock %}
