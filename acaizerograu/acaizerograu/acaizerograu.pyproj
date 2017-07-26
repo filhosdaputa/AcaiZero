@@ -137,7 +137,7 @@
     <Content Include="app\static\app\content\navbar.css" />
     <Content Include="app\static\app\content\signin.css" />
     <Content Include="app\static\app\content\style.css" />
-    <Content Include="app\static\app\content\cssacai6.css" />
+    <Content Include="app\static\app\content\cssacai1.css" />
     <Content Include="app\static\app\img\adicionais\abacaxi.png" />
     <Content Include="app\static\app\img\adicionais\aveia.png" />
     <Content Include="app\static\app\img\adicionais\banana.png" />
@@ -176,6 +176,7 @@
     <Content Include="app\static\app\img\pedidosacai.png" />
     <Content Include="app\static\app\img\P.png" />
     <Content Include="caixa\templates\caixa.html" />
+    <Content Include="caixa\templates\extrato.html" />
     <Content Include="caixa\templates\fechar.html" />
     <Content Include="caixa\templates\fechar_1.html" />
     <Content Include="caixa\templates\retirada.html" />

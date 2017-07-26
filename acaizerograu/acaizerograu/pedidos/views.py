@@ -137,7 +137,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaipuro' and tamanho == 'P' and qnt != None:
@@ -147,7 +148,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaipuro' and tamanho == 'G' and qnt != None:
@@ -157,7 +159,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaipuro' and tamanho == 'G' and qnt == None:
@@ -167,7 +170,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaidiverso' and tamanho == 'P' and qnt != None:
@@ -177,7 +181,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaidiverso' and tamanho == 'P' and qnt == None:
@@ -187,7 +192,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaidiverso' and tamanho == 'G' and qnt != None:
@@ -197,7 +203,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaidiverso' and tamanho == 'G' and qnt == None:
@@ -207,7 +214,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaimix' and tamanho == 'P' and qnt == None:
@@ -217,7 +225,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaimix' and tamanho == 'P' and qnt != None:
@@ -227,7 +236,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaimix' and tamanho == 'G' and qnt == None:
@@ -237,7 +247,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'acaimix' and tamanho == 'G' and qnt != None:
@@ -247,7 +258,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'casadinho' and tamanho == 'P' and qnt == None:
@@ -257,7 +269,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'casadinho' and tamanho == 'P' and qnt != None:
@@ -267,7 +280,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'casadinho' and tamanho == 'G' and qnt == None:
@@ -277,7 +291,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'casadinho' and tamanho == 'G' and qnt != None:
@@ -287,7 +302,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremepuro' and tamanho == 'P' and qnt == None:
@@ -297,7 +313,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremepuro' and tamanho == 'P' and qnt != None:
@@ -307,7 +324,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremepuro' and tamanho == 'G' and qnt == None:
@@ -317,7 +335,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremepuro' and tamanho == 'G' and qnt != None:
@@ -327,7 +346,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremediverso' and tamanho == 'G' and qnt == None:
@@ -337,7 +357,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremediverso' and tamanho == 'G' and qnt != None:
@@ -347,7 +368,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremediverso' and tamanho == 'P' and qnt == None:
@@ -357,7 +379,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cremediverso' and tamanho == 'P' and qnt != None:
@@ -367,7 +390,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bomba' and tamanho == 'P' and qnt == None:
@@ -377,7 +401,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bomba' and tamanho == 'P' and qnt != None:
@@ -387,7 +412,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bomba' and tamanho == 'G' and qnt == None:
@@ -397,7 +423,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bomba' and tamanho == 'G' and qnt != None:
@@ -407,7 +434,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'tribomba' and tamanho == 'P' and qnt == None:
@@ -417,7 +445,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'tribomba' and tamanho == 'P' and qnt != None:
@@ -427,7 +456,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'tribomba' and tamanho == 'G' and qnt == None:
@@ -437,7 +467,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'tribomba' and tamanho == 'G' and qnt != None:
@@ -447,7 +478,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake1' and tamanho == 'P' and qnt == None:
@@ -457,7 +489,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake1' and tamanho == 'P' and qnt != None:
@@ -467,7 +500,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake1' and tamanho == 'G' and qnt == None:
@@ -477,7 +511,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake1' and tamanho == 'G' and qnt != None:
@@ -487,7 +522,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake2' and tamanho == 'P' and qnt == None:
@@ -497,7 +533,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake2' and tamanho == 'P' and qnt != None:
@@ -507,7 +544,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake2' and tamanho == 'G' and qnt == None:
@@ -517,7 +555,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'milkshake2' and tamanho == 'G' and qnt != None:
@@ -527,7 +566,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'classico' and tamanho == None and qnt == None:
@@ -537,7 +577,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'kids' and tamanho == None and qnt == None:
@@ -547,7 +588,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'classico' and tamanho == None and qnt != None:
@@ -557,7 +599,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'kids' and tamanho == None and qnt != None:
@@ -567,7 +610,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'fondue1' and tamanho == None and qnt == None:
@@ -577,7 +621,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'fondue2' and tamanho == None and qnt == None:
@@ -587,7 +632,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'fondue1' and tamanho == None and qnt != None:
@@ -597,7 +643,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'fondue2' and tamanho == None and qnt != None:
@@ -607,7 +654,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('total')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'diverso' and tamanho == None and qnt == None:
@@ -617,7 +665,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'diverso' and tamanho == None and qnt != None:
@@ -627,7 +676,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cascao' and tamanho == None and qnt == None:
@@ -637,7 +687,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'cascao' and tamanho == None and qnt != None:
@@ -647,7 +698,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'simples' and tamanho == None and qnt == None:
@@ -657,7 +709,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'simples' and tamanho == None and qnt != None:
@@ -667,7 +720,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'sundae' and tamanho == None and qnt == None:
@@ -677,7 +731,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'sundae' and tamanho == None and qnt != None:
@@ -687,7 +742,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bananasplit' and tamanho == None and qnt == None:
@@ -697,7 +753,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif pedido == 'bananasplit' and tamanho == None and qnt != None:
@@ -707,7 +764,8 @@ def pagamento(request):
         controle.save()
         caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal2 = caixa(total=caixatotal1.total)
+        pedido = pedido+" adc * "+qnt+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=pedido)
         caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     
@@ -765,45 +823,66 @@ def produtos_1(request):
         total = acaiteste.preco
         controle = comanda(itens=acaiteste, total=total)
         controle.save()
-        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal1.save()
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif produto1 == 'cocazero':
         acaiteste = produto.objects.filter(img=produto1).get()
         total = acaiteste.preco
         controle = comanda(itens=acaiteste, total=total)
         controle.save()
-        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal1.save()
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif produto1 == 'guarana':
         acaiteste = produto.objects.filter(img=produto1).get()
         total = acaiteste.preco
         controle = comanda(itens=acaiteste, total=total)
         controle.save()
-        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal1.save()
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif produto1 == 'aguacgas':
         acaiteste = produto.objects.filter(img=produto1).get()
         total = acaiteste.preco
         controle = comanda(itens=acaiteste, total=total)
         controle.save()
-        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal1.save()
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     elif produto1 == 'aguasgas':
         acaiteste = produto.objects.filter(img=produto1).get()
         total = acaiteste.preco
         controle = comanda(itens=acaiteste, total=total)
         controle.save()
-        caixatotal1 = caixa.objects.latest('total')
+        caixatotal1 = caixa.objects.latest('id')
         caixatotal1.total = caixatotal1.total+controle.total
-        caixatotal1.save()
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
+        return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
+    elif produto1 == 'suco':
+        acaiteste = produto.objects.filter(img=produto1).get()
+        total = acaiteste.preco
+        controle = comanda(itens=acaiteste, total=total)
+        controle.save()
+        caixatotal1 = caixa.objects.latest('id')
+        caixatotal1.total = caixatotal1.total+controle.total
+        produto1 = produto1+" Total = "+str(total)
+        caixatotal2 = caixa(total=caixatotal1.total, obs=produto1)
+        caixatotal2.save()
         return render(request, 'pagamento.html', {'title':'Pagamento', 'total':total})
     return render(request, 'produtos_1.html', {'title':'Produtos'})
 

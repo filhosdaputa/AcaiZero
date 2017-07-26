@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿{% extends 'base.html' %}
+{% block body %}
+<form action="/" class="col-md-6 col-md-offset-3">
+    <h2>Valor total em caixa : R$ {{total}}
+    <br />
+    <br />
+    Valor da retirada : R$ {{retirada1}}
+    <br />
+    <br />
+    <button type="submit" autofocus>Finalizar</button>
+    </h2>
+</form>
+{% endblock %}

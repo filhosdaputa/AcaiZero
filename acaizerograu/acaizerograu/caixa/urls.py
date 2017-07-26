@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^retirada_1/$', views.retirada_1),
     url(r'^fechar/$', views.fechar),
     url(r'^fechar_1/$', views.fechar_1),
+    url(r'^extrato/$', views.extrato),
     ]
